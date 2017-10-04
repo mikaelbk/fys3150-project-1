@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{physics}
+\usepackage{graphicx}
 
 \author{Mikael B. Kiste}
 \title{FYS5100 - project 1}
@@ -179,5 +180,18 @@ https://github.com/mikaelbk/fys3150-project-1
     For the general it is easy to see that we have 6 floating point operations (basic arithmetic operations with float datatype numbers) in equation 1 and 2, 3 in each. And 2 FLOPS for equation 3. All in all 8 FLOPS.
     However, since we do not need to apply this for the very first element (e.g. $\tilde{b}_1 = b_1$) we can subtract one loop iteration. If we have an $n\times n$ matrix the number of FLOPS then becomes $8(n-1)$.\\
     For the special algorithm we can abuse the fact that have an analytical term that saves us one operation in the forwards substitution and one in the backwards substitution. Therefore we have $6(n-1)$ FLOPS in the specific numerical solution.
+
+    \newpage{}
+    \section{Results}
+    Results are presented through plots in this section.
+    \begin{figure}[b]
+      \includegraphics[width = \textwidth]{general_10}
+    \end{figure}
+    \begin{figure}
+      \includegraphics[width = \textwidth]{general_100}
+    \end{figure}
+    \begin{figure}
+      \includegraphics[width = \textwidth]{general_1000}
+    \end{figure}
 
 \end{document}
