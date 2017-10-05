@@ -4,6 +4,7 @@
 \usepackage{float}
 \usepackage{physics}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \author{Mikael B. Kiste}
 \title{FYS5100 - project 1}
@@ -106,7 +107,7 @@
 
 	\newpage
     \section{Differential equations as a linear problem}
-    The general one-dimensional Poisson equation\footnote{source here} can be expressed as
+    The general one-dimensional Poisson equation can be expressed as
     \[
     -g''(x) = f(x)
     \]
@@ -184,14 +185,29 @@ https://github.com/mikaelbk/fys3150-project-1
     \newpage{}
     \section{Results}
     Results are presented through plots in this section.
-    \begin{figure}[b]
+    \begin{figure}
       \includegraphics[width = \textwidth]{general_10}
+      \caption{This is the plot for n=10 using the general algorithm. There is quite some difference between the numerical vs the analytical solution}
     \end{figure}
     \begin{figure}
       \includegraphics[width = \textwidth]{general_100}
+      \caption{This is the plot for n=100 using the general algorithm. The difference between the numerical vs the analytical solution only shows in a log plot of the relative error}
     \end{figure}
     \begin{figure}
       \includegraphics[width = \textwidth]{general_1000}
+      \caption{This is the plot for n=1000 using the general algorithm. The difference between the numerical vs the analytical solution is miniscule}
     \end{figure}
+
+    \newpage{}
+    \section{Discussion}
+    From figure 1, 2 and 3 there is a trend that the numerical solution gets more and more accurate for more datapoints. For only 10 there is almost too much variance to consider the results as even indicative.
+
+    \newpage{}
+    \section{sources}
+    \begin{itemize}
+     \item
+     \href{https://github.com/CompPhysics/ComputationalPhysics}{fys3150 github repo}
+     \item \href{http://www.uio.no/studier/emner/matnat/fys/FYS3150/h17/index.html}{fys3150 course page}
+    \end{itemize}
 
 \end{document}
