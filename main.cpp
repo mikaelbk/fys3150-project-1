@@ -8,6 +8,8 @@
 
 using namespace std;
 
+
+
 /* call with g++ -std=c++11 etc */
 
 double* solveTriDig(double a[], double b[], double c[], double f[], int N) /* A(abc)v=f */
